@@ -22,7 +22,7 @@ pipeline {
     }
     post {
         always {
-        currentbuild.result
+            currentbuild.result
         }
     }
 }
