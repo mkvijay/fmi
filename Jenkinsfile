@@ -24,7 +24,7 @@ pipeline {
     }
     post {
         always {
-            notifier currentBuild.result
+            approval currentBuild.result
         }
     }
 }
