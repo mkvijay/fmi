@@ -23,11 +23,8 @@ pipeline {
         }
     }
     post {
-        success {
-            slackSend ( channel: 'work-test', color: '#00FF00', message: "pipeline completed (${env.BUILD_URL})" )
-        }
-        failure {
-            slackSend ( channel: 'work-test', color: '#FF0000', message: "pipeline completed (${env.BUILD_URL})" )
+        always {
+            notifier currentBuild.result
         }
     }
 }
