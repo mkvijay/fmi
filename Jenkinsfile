@@ -3,21 +3,15 @@
 pipeline {
     node
     stages {
-        stage 'Compile Stage' {
-            steps {
-                echo 'Hello World'
-            }
+        stage ('Compile Stage') {
+             echo 'Hello World'
         }
-        stage 'Testing Stage' {
-            steps {
-                echo 'pipeline welcome'
+        stage ('Testing Stage') {
+             echo 'pipeline welcome'
             }
-        }
-        stage 'Deployment Stage' {
-            steps {
-                echo 'pipeline is working'
+        stage ('Deployment Stage') {
+             echo 'pipeline is working'
             }
-        }
     }
     post {
         always {
