@@ -4,19 +4,19 @@ pipeline {
     agent any
 
     stages {
-        stage ('Compile Stage') {
+        stage 'Compile Stage' {
 
             steps {
                 echo 'Hello World'
             }
         }
-        stage ('Testing Stage') {
+        Stage 'Testing Stage' {
 
             steps {
                 echo 'pipeline welcome'
             }
         }
-        stage ('Deployment Stage') {
+        stage 'Deployment Stage' {
             steps {
                 echo 'pipeline is working'
             }
