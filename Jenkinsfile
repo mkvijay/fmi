@@ -1,18 +1,19 @@
 #!groovy
 @Library('my-shared-library') _
 pipeline {
-    agent any
+    agent none 
     stages {
-        stage ('Compile Stage') 
-                             echo 'Hello World'
-        stage ('Testing Stage') 
-                             echo 'pipeline welcome'
-        stage ('Deployment Stage') 
-                             echo 'pipeline is working'
-    }
-    post {
-        always {
-            notifier currentBuild.result
+        stage('Example Build') { 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') { 
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
         }
     }
 }
