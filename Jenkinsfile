@@ -10,7 +10,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        Stage 'Testing Stage' {
+        stage 'Testing Stage' {
 
             steps {
                 echo 'pipeline welcome'
