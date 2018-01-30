@@ -1,17 +1,14 @@
 #!groovy
 @Library('my-shared-library') _
 pipeline {
-    agent any
-
+    node
     stages {
         stage 'Compile Stage' {
-
             steps {
                 echo 'Hello World'
             }
         }
         stage 'Testing Stage' {
-
             steps {
                 echo 'pipeline welcome'
             }
